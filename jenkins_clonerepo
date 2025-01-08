@@ -1,0 +1,5 @@
+node{
+stage('clone repository'){
+git 'https://github.com/dhananjay-shetty/misc.git'
+}
+}

@@ -1,5 +1,5 @@
 node{
 stage('clone repository'){
-git 'https://github.com/dhananjay-shetty/main.git'
+git url: 'https://github.com/dhananjay-shetty/main.git'
 }
 }

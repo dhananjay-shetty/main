@@ -1,7 +1,8 @@
 node{
 stage('clean up')
 {
-WsCleanup()
+// WsCleanup()
+echo 'this is the clean up stage'
 }
 stage('disable concurrent build'){
 echo 'The branch name is : ${env.BRANCH_NAME}'

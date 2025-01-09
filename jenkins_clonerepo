@@ -1,14 +1,14 @@
 node{
 stage('clean up')
 {
-// WsCleanup()
+cleanWs()
 echo 'this is the clean up stage'
 }
 stage('disable concurrent build'){
 echo 'The branch name is : ${env.BRANCH_NAME}'
-properties([disableconcurrentbuilds()])
+properties([disableConcurrentBuilds()])
 }
 stage('update git lab commit status'){
-updategitlabcommitstatus name: STAGE_NAME, state: 'running'
+updateGitlabCommitStatus name: STAGE_NAME, state: 'running'
 }
 }

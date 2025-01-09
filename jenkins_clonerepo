@@ -5,7 +5,7 @@ wscleanup()
 }
 stage('disable concurrent build'){
 echo 'The branch name is : ${env.BRANCH_NAME}'
-properties([disableconcurrentbuilds()]')
+properties([disableconcurrentbuilds()])
 }
 stage('update git lab commit status'){
 updategitlabcommitstatus name: STAGE_NAME, state: 'running'
